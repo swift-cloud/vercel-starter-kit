@@ -1,4 +1,4 @@
-name: Vercel
+name: Vercel Prod
 
 on:
   push:
