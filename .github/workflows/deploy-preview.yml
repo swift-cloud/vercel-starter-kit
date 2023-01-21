@@ -3,7 +3,7 @@ name: Vercel Preview
 on:
   workflow_dispatch:
   push:
-    ignore-branches:
+    branches-ignore:
       - main
 
 env:
