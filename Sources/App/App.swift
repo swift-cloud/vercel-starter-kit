@@ -1,10 +1,16 @@
 import Vercel
 
 @main
-struct App: RequestHandler {
+struct App: ExpressHandler {
 
-    func onRequest(_ req: Request, context: Context) async throws -> Response {
-        let greeting = EdgeConfig.default["greeting", default: "World"]
-        return .init(statusCode: .ok, body: "Hello, \(greeting)")
-    }
+    static let router = Router()
+        .get("/") { req, res in
+            res.status(.ok).send("Hello, Swift")
+        }
+        .get("/json") { req, res in
+            try res.status(.ok).send(["name": "Andrew"])
+        }
+        .get("/:name") { req, res in
+            res.send("Hello, " + req.pathParams["name"]!)
+        }
 }
