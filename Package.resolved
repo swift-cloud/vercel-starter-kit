@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-cloud/Crypto",
+      "state" : {
+        "revision" : "defff250bbd79d81fb8ee53926360fc522d75bad",
+        "version" : "1.6.0"
+      }
+    },
+    {
       "identity" : "swift-atomics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",
@@ -60,7 +69,7 @@
       "location" : "https://github.com/swift-cloud/Vercel",
       "state" : {
         "branch" : "main",
-        "revision" : "33274afcc07f040de7fb94a14fc750eca48dc790"
+        "revision" : "7b73406a68dc66b98270dd2f0bf585a48b07fcd6"
       }
     }
   ],
