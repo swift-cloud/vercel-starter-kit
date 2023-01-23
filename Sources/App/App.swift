@@ -1,10 +1,25 @@
-import Vercel
+import VercelUI
+
+struct IndexPage: View {
+
+    @Environment(\.request) var req
+
+    var body: some View {
+        VStack {
+            Text("Hello, Swift")
+                .font(.title)
+
+            Text("This is a server rendered SwiftUI website")
+                .font(.subheadline)
+
+            Text("Your ip address \(req.clientIPAddress)")
+        }
+    }
+}
 
 @main
-struct App: RequestHandler {
+struct App: ExpressHandler {
 
-    func onRequest(_ req: Request, context: Context) async throws -> Response {
-        let greeting = EdgeConfig.default.get("greeting").string ?? "World"
-        return .status(.ok).send("Hello, \(greeting)")
-    }
+    static let router = Router()
+        .get("/", IndexPage())
 }
