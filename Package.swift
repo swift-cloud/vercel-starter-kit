@@ -9,10 +9,10 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-cloud/PlanetScale", from: "1.0.0"),
-        .package(url: "https://github.com/swift-cloud/Vercel", from: "1.2.0"),
+        .package(url: "https://github.com/swift-cloud/Vercel", branch: "main"),
         .package(url: "https://github.com/swift-cloud/VercelUI", branch: "main")
     ],
     targets: [
-        .executableTarget(name: "App", dependencies: ["PlanetScale", "Vercel", "VercelUI"])
+        .executableTarget(name: "App",  dependencies: ["PlanetScale", "VercelUI"])
     ]
 )
