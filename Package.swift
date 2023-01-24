@@ -8,7 +8,7 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-cloud/Vercel", branch: "main")
+        .package(url: "https://github.com/swift-cloud/Vercel", from: "1.5.0")
     ],
     targets: [
         .executableTarget(name: "App", dependencies: ["Vercel"])
