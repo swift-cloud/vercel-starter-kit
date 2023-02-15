@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/Vercel",
       "state" : {
-        "revision" : "812e6ca81372ea4599377e535d7b021fcbc42a56",
-        "version" : "1.6.0"
+        "revision" : "d1984f3d8ec97b7ff463ea691244e78390925202",
+        "version" : "1.7.1"
       }
     }
   ],
