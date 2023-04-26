@@ -1,3 +1,9 @@
 {
-  "buildCommand": "swift package --disable-sandbox vercel"
+  "buildCommand": "swift package --disable-sandbox vercel",
+  "crons": [
+      {
+          "path": "/api/cron",
+          "schedule": "0 5 * * *"
+      }
+  ]
 }
