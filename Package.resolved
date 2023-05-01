@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "compute",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-cloud/Compute",
+      "state" : {
+        "revision" : "cc89dba27ade5713a2ac167fc752c4f4fe00439a",
+        "version" : "2.17.0"
+      }
+    },
+    {
       "identity" : "swift-atomics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",
@@ -64,12 +73,21 @@
       }
     },
     {
+      "identity" : "upstash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-cloud/Upstash",
+      "state" : {
+        "revision" : "993942242fa3ba75dea8da5c16e3df1857f604a1",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "vercel",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/Vercel",
       "state" : {
-        "revision" : "8ff652d69ddba1338ebd54edf67814480eb33b79",
-        "version" : "1.9.0"
+        "revision" : "535029b3118612dadb01d5020406471f799f6d7d",
+        "version" : "1.10.0"
       }
     }
   ],
