@@ -10,7 +10,7 @@ let kv = RedisClient(
 struct App: RequestHandler {
 
     func onRequest(_ req: Request, context: Context) async throws -> Response {
-        let visits: Int = try await kv.exec("incr", ["visits"])
+        let visits: Int = try await kv.exec("incr", ["visits"]).decode()
         return .status(.ok).send("Hello, Swift. Visits \(visits)")
     }
 }

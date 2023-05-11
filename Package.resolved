@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "anycodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/flight-school/anycodable",
+      "state" : {
+        "revision" : "862808b2070cd908cb04f9aafe7de83d35f81b05",
+        "version" : "0.6.7"
+      }
+    },
+    {
       "identity" : "compute",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/Compute",
@@ -68,8 +77,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "f7c46552983b06b0958a1a4c8bc5199406ae4c8a",
-        "version" : "2.51.0"
+        "revision" : "d1690f85419fdac8d54e350fb6d2ab9fd95afd75",
+        "version" : "2.51.1"
       }
     },
     {
@@ -77,8 +86,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/Upstash",
       "state" : {
-        "revision" : "993942242fa3ba75dea8da5c16e3df1857f604a1",
-        "version" : "1.0.1"
+        "revision" : "2b5724439eead5360f34eabf84dd5537441e1200",
+        "version" : "1.1.0"
       }
     },
     {
