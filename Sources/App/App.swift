@@ -1,9 +1,30 @@
 import Vercel
 
 @main
-struct App: RequestHandler {
+struct App: ExpressHandler {
 
-    func onRequest(_ req: Request, context: Context) async throws -> Response {
-        return .status(.ok).send("Hello, Swift")
-    }
+    static let router = Router()
+        .get("/") { _, res in
+            res
+                .header(.cacheControl, "private, max-age=0")
+                .send("Hello, Vercel")
+        }
+        .get("/cache-control") { _, res in
+            res
+                .header(.cacheControl, "public, max-age=60")
+                .send("Hello, Vercel")
+        }
+        .get("/cdn-cache-control") { _, res in
+            res
+                .header(.cacheControl, "private, max-age=0")
+                .header(.cdnCacheControl, "public, max-age=60")
+                .send("Hello, Vercel")
+        }
+        .get("/vercel-cdn-cache-control") { _, res in
+            res
+                .header(.cacheControl, "private, max-age=0")
+                .header(.cdnCacheControl, "private, max-age=0")
+                .header(.vercelCdnCacheControl, "public, max-age=60")
+                .send("Hello, Vercel")
+        }
 }
