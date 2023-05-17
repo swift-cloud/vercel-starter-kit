@@ -4,10 +4,11 @@ import Vercel
 struct App: ExpressHandler {
 
     static let router = Router()
-        .get("/") { _, res in
-            res
+        .get("/") { req, res in
+            let host = req.header(.host) ?? "(unknown)"
+            return res
                 .header(.cacheControl, "private, max-age=0")
-                .send("Hello, Vercel")
+                .send("Hello, Vercel. Host: \(host)")
         }
         .get("/cache-control") { _, res in
             res
