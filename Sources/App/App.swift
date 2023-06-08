@@ -15,6 +15,11 @@ struct App: ExpressHandler {
                 .header(.cacheControl, "public, max-age=60")
                 .send("Hello, Vercel")
         }
+        .get("/cache-control-only") { _, res in
+            res
+                .header(.cacheControl, "max-age=60")
+                .send("Hello, Vercel")
+        }
         .get("/cdn-cache-control") { _, res in
             res
                 .header(.cacheControl, "private, max-age=0")
