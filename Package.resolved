@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "d1690f85419fdac8d54e350fb6d2ab9fd95afd75",
-        "version" : "2.51.1"
+        "revision" : "6213ba7a06febe8fef60563a4a7d26a4085783cf",
+        "version" : "2.54.0"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-cloud/Vercel",
       "state" : {
-        "revision" : "af9ea3213f1899fc344c94dce344d14390cd3f57",
-        "version" : "1.11.0"
+        "revision" : "bf811eb4159d9316d71f865d8d5abb691e2896d5",
+        "version" : "1.13.0"
       }
     }
   ],
