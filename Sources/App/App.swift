@@ -1,9 +1,24 @@
-import Vercel
+import Vapor
+import VercelVapor
 
 @main
-struct App: RequestHandler {
+struct App: VaporHandler {
 
-    func onRequest(_ req: Request, context: Context) async throws -> Response {
-        return .status(.ok).send("Hello, Swift")
-    }
+    static let app: Application = {
+        // Create application
+        let app = Application()
+
+        // Register basic route
+        app.get { req in
+            return Response(body: "Hello, Vapor")
+        }
+
+        // Register vercel handler
+        app.servers.use(.vercel)
+
+        // Start the app
+        try? app.start()
+
+        return app
+    }()
 }
