@@ -19,6 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: GitHub Refs
+        uses: rlespinasse/github-slug-action@v2.x
+
       - uses: actions/cache@v3
         with:
           path: .build
@@ -34,4 +37,4 @@ jobs:
         run: npm install -g vercel@latest
 
       - name: Deploy
-        run: swift package --disable-sandbox vercel --deploy
+        run: swift package --disable-sandbox vercel --deploy --alias $GITHUB_REF_SLUG_URL
