@@ -186,7 +186,7 @@
       "location" : "https://github.com/swift-cloud/Vercel",
       "state" : {
         "branch" : "arm64",
-        "revision" : "66a8031d7b3718f60f3b384eb8bd9b9a2721d6ba"
+        "revision" : "0a7ddf38f599d35c3b1db4032e76ed3f88210e84"
       }
     },
     {
