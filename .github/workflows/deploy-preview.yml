@@ -13,7 +13,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204-arm
     container: swift:5.8-amazonlinux2
 
     steps:
