@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.9
 
 import PackageDescription
 
@@ -8,7 +8,7 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-cloud/Vercel", from: "2.0.0")
+        .package(url: "https://github.com/swift-cloud/Vercel", from: "2.0.1")
     ],
     targets: [
         .executableTarget(name: "App", dependencies: ["Vercel"])
