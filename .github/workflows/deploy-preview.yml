@@ -12,10 +12,10 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: swift:5.9-amazonlinux2
+    container: swift:5.10-amazonlinux2
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - uses: actions/cache@v4
         with:
