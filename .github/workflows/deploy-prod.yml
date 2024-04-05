@@ -12,20 +12,20 @@ env:
 
 jobs:
   deploy:
-    runs-on: buildjet-4vcpu-ubuntu-2204
-    container: swift:5.8-amazonlinux2
+    runs-on: ubuntu-latest
+    container: swift:5.10-amazonlinux2
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: .build
           key: ${{ runner.os }}-spm-${{ hashFiles('Package.resolved') }}
           restore-keys: |
             ${{ runner.os }}-spm-
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 16
 
@@ -33,4 +33,4 @@ jobs:
         run: npm install -g vercel@latest
 
       - name: Deploy
-        run: swift package --disable-sandbox vercel --deploy --prod
+        run: swift package --disable-sandbox vercel deploy --prod
